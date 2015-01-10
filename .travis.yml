@@ -9,6 +9,7 @@ env:
   - ASSERT_VERSION="~2.0"
 
 before_install:
+  - composer selfupdate
   - composer require --no-update beberlei/assert:"${ASSERT_VERSION}"
 
 install:
