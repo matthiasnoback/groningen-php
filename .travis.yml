@@ -9,7 +9,7 @@ env:
   - ASSERT_VERSION="~2.0"
 
 before_install:
-  - composer require --no-update "beberlei/assert:${ASSERT_VERSION}"
+  - composer require --no-update beberlei/assert:"${ASSERT_VERSION}"
 
 install:
   - composer install --prefer-source
@@ -17,5 +17,6 @@ install:
 script:
   - vendor/bin/phpunit
 
-notifications: 
-  email: matthiasnoback@gmail.com 
+notifications:
+  email:
+    - matthiasnoback@gmail.com
