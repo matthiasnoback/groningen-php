@@ -4,8 +4,15 @@ php:
   - 5.4
   - 5.5
 
+env:
+  - ASSERT_VERSION="~1.0"
+  - ASSERT_VERSION="~2.0"
+
+before_install:
+  - composer require --no-update "beberlei/assert:${ASSERT_VERSION}"
+
 install:
-  - composer install
+  - composer install --prefer-source
 
 script:
   - vendor/bin/phpunit
